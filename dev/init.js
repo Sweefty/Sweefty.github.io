@@ -15,6 +15,6 @@ exports.data = {
         "https://fonts.googleapis.com/css?family=Lobster"
     ],
 
-    "description" : "raw base template",
-    "title" : "raw starting point template"
+    "description" : "web solutions",
+    "title" : "sweefty.com"
 };
