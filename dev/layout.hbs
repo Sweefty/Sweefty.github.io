@@ -1,0 +1,75 @@
+<!doctype html>
+    <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><html lang="en"><![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>{{title}}</title>
+
+        {{#if description}}
+        <meta name="description" content="{{description}}">
+        {{/if}}
+        <meta name="author" content="">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- CSS Files -->
+        {{#each default_css}}
+        <link rel="stylesheet" href="{{this}}">
+        {{/each}}
+
+        <!-- JAVASCRIPT  Files -->
+        {{#each default_javascript}}
+        <script src="{{this}}" type="text/javascript"></script>
+        {{/each}}
+        {{#each javascript}}
+        <script src="{{this}}" type="text/javascript"></script>
+        {{/each}}
+
+        <!-- FONTS -->
+        {{#each fonts}}
+        <link href='{{this}}' rel='stylesheet' type='text/css'>
+        {{/each}}
+
+        
+        <link rel="stylesheet" href="{{assets}}/css/prism.css">        
+        <script src="{{assets}}/js/prism.js"></script>
+        <script src="{{assets}}/js/heat.js"></script>
+        <script src="{{assets}}/js/tinytip.js"></script>
+    </head>
+    
+    <body id="">
+{{> content}}
+
+    <!-- Quantcast Tag -->
+    <script type="text/javascript">
+        var _qevents = _qevents || [];
+
+        (function() {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+        })();
+
+        _qevents.push({
+        qacct:"p-_KGh1jnDGx1N4"
+        });
+    </script>
+
+    <noscript>
+    <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-_KGh1jnDGx1N4.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+
+    </body>
+</html>
