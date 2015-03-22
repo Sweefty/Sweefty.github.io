@@ -31,6 +31,10 @@ a {
                    0 3px 0 #bbb,
                    0 4px 0 #fff,
                    0 2px 0 #aaa;
+  cursor: pointer;
+}
+.mainlogo a:visited {
+  color: #CE4F4F;
 }
 .footer {
   margin-top: 250px;
@@ -52,6 +56,10 @@ a {
                        0 3px 0 #bbb,
                        0 4px 0 #fff,
                        0 2px 0 #aaa;
+  cursor: pointer;
+}
+.footer .flogo a:visited {
+  color: #CE4F4F;
 }
 .footer .hello {
   text-align: left;

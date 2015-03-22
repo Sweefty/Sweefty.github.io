@@ -1,6 +1,6 @@
 (function($){
     $(document).ready(function() {
-    	$('.block.link').tinytip({
+        $('.block.link').tinytip({
             position : 'bottom',
             animation : '+10',
             tooltip : "Coming Soon",
@@ -14,5 +14,9 @@
             },
             //off: 'click'
         });
+
+        // $('.mainlogo, .flogo').click(function(){
+        //     window.location.href = "http://sweefty.com";
+        // });
     });
 }(jQuery));

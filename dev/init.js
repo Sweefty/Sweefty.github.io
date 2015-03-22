@@ -1,10 +1,17 @@
-exports.outLocation = '../';
-//handlebars partials
-exports.partials = {};
+var fs = require('fs');
+var path = require('path');
 
-//handlebars helpers
-exports.helpers = {
-    test : function(arg1){}
+exports.outLocation = '../';
+
+
+var header = fs.readFileSync(path.resolve(__dirname + '/partials/header.hbs'));
+var footer = fs.readFileSync(path.resolve(__dirname + '/partials/footer.hbs'));
+
+exports.handlebars = function(Handlebars){
+	Handlebars.registerPartial({
+  		header: header.toString(),
+  		footer: footer.toString()
+	});
 };
 
 exports.data = {
