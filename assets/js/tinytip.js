@@ -16,13 +16,10 @@
         off : 'mouseleave'
     };
 
-    var lastElement;
-    
-
     var _tooltip = function(ele,obj){
         var _isview = false;
         obj = $.extend({},tooltip_options, obj);
-        var text = obj.tooltip || ele.data('tooltip');
+        var text = ele.data('tinytip') || obj.tooltip;
         var fix = obj.fix || {top: 0, left: 0};
         
         var _preventOnMouseEnter = false;
@@ -43,6 +40,14 @@
         if (obj.addClass){
             _SW_tooltip.addClass(obj.addClass);
         }
+        
+        if (obj.wrapper){
+            obj.wrapper = $(obj.wrapper);
+            _SW_tooltip.append(obj.wrapper);
+        } else {
+            obj.wrapper = _SW_tooltip;
+        }
+
         if (text || obj.content){
             var fixX = parseInt(fix.left) || 0,
                 fixY = parseInt(fix.top) || 0;
@@ -112,10 +117,10 @@
 
                 if (obj.content){
                     obj.clone = obj.content.clone();
-                    _SW_tooltip.html(obj.clone);
+                    obj.wrapper.html(obj.clone);
                     obj.clone.show();
                 } else if (text){
-                    _SW_tooltip.html(text);
+                    obj.wrapper.html(text);
                 }
 
                 var top = ele.offset().top + fixY;
@@ -135,7 +140,7 @@
                     left = left + (width/2);
                     left = left - (_SW_tooltip.outerWidth()/2);
                     top = top - height - 2;
-                } 
+                }
                 
                 start1 = parseFloat(startY(top));
                 start2 = parseFloat(startX(left));
