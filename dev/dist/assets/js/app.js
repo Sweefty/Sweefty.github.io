@@ -1,11 +1,17 @@
 (function($){
     $(document).ready(function() {
-        $('.block.link').tinytip({
+        $('.block.link.soon').tinytip({
+            
             position : 'bottom',
-            animation : '+10',
+            animation : {
+                top: +10
+            },
             tooltip : "Coming Soon",
             // content : $('.drop-menu'),
-            //fix : '-20 -20',
+            fix : {
+                top: -100,
+                left: -100
+            },
             speed : 100,
             on : 'click',
             preventClose : true,

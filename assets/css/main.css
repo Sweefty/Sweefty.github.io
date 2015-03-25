@@ -282,6 +282,7 @@ h1.logo {
   background: #0099FF;
   color: #fff;
   padding: 5px;
+  width: 100%;
 }
 .tinytip p {
   padding: 0;

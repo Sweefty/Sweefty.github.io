@@ -8,10 +8,10 @@ var header = fs.readFileSync(path.resolve(__dirname + '/partials/header.hbs'));
 var footer = fs.readFileSync(path.resolve(__dirname + '/partials/footer.hbs'));
 
 exports.handlebars = function(Handlebars){
-	Handlebars.registerPartial({
-  		header: header.toString(),
-  		footer: footer.toString()
-	});
+    Handlebars.registerPartial({
+        header: header.toString(),
+        footer: footer.toString()
+    });
 };
 
 exports.data = {

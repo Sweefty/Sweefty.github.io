@@ -1,0 +1,338 @@
+<!doctype html>
+    <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+    <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+    <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+    <!--[if (gte IE 9)|!(IE)]><html lang="en"><![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <title>TinyTip</title>
+
+        <meta name="description" content="Tiny Tooltip jQuery plugin">
+        <meta name="author" content="">
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+        <link rel="stylesheet" href="../assets/css/bare.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+
+        <!-- JAVASCRIPT  Files -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+        <script src="../assets/js/app.js" type="text/javascript"></script>
+
+        <!-- FONTS -->
+        <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+        
+        <link rel="stylesheet" href="../assets/css/prism.css">        
+        <script src="../assets/js/prism.js"></script>
+        <script src="../assets/js/heat.js"></script>
+        <script src="../assets/js/tinytip.js"></script>
+    </head>
+    
+    <body id="">
+
+<style>
+    .examples .block {
+        cursor: pointer;
+    }
+
+    .tinytip.green {
+        background: green;
+    }
+
+    .tinytip.red {
+        background: red;
+    }
+</style>
+
+<div class="header-container">
+    <div class="header">
+        <div class="mainlogo">
+            <a href="http://sweefty.com">Sweefty</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="intro row">
+        <div class="column grid-12">
+            <div class="block">
+                <div class="top-sep"></div>
+
+                <div class="splash">
+                    <h1>TinyTip.js</h1>
+                    <h2>Tiny Tooltip jQuery Plugin</h2>
+                    <div class="buttons">
+                        <a href="https://github.com/Sweefty/tinytip" class="button large red">Fork Me</a>
+                        <a href="https://github.com/Sweefty/tinytip/archive/master.zip" class="button large red">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+                <div class="block code">
+                    <pre><code class="language-bash">$ bower install tinytip</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+                <div style="height:100px;">
+                    
+                </div>
+                <h1 style="text-align:center;">How To Use</h1>
+                <div style="height:100px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+
+<div class="block">
+
+<pre><code class="language-css">
+&lt;!-- first include jQuery library --&gt;
+&lt;script src="./jQuery.js"&gt;&lt;/script&gt;
+&lt;!-- Then tinytip plugin --&gt;
+&lt;script src="./tinytip.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<pre><code class="language-javascript">
+$('.block.link').tinytip({
+    //position [top|bottom|left|right]
+    position : 'bottom',
+
+    //tooltip position fix [+-][yx]
+    fix : {
+        top : -10,
+        left: +20
+    },
+
+    //animation effect start position [+,-][top,left]
+    //example +10 => animate up 10 pixels
+    animation : {
+        top : +10,
+        left: -5,
+    },
+
+    //animation speed in milliseconds
+    speed : 100,
+
+    //tooltip text, or can be a jQuery object of
+    //selected element
+    tooltip : "Hi There" || $('.some-selector'),
+
+    //when to show tooltip event (default: mouseenter)
+    on : 'click',
+
+    //when to hide tooltip event (default: mouseleave)
+    off: 'click'
+
+    //prevent tooltip close when hover over it
+    preventClose : true,
+
+    //callback function fired once the tooltip completely loaded
+    //passes tooltip element jQuery object (e)
+    onLoad : function(e){
+        e.text('lool');
+    },
+
+    //add custom class to this tooltip
+    addClass : 'unique'
+});
+</code></pre>
+</div>
+
+            </div>
+            <div class="column grid-12">
+                <div class="block outline-no-hover option">
+                    <div class="title">Options</div>
+                    <ul>
+                        <li>
+                            <span>position :</span><i>(string)</i> where to place tooltip element [top|bottom|left|right]
+                        </li>
+                        <li>
+                            <span>fix :</span><i>(object)</i> fix tooltip relative position
+                            <ul>
+                                <li><b>top :</b><i>([+|-]number)</i> set top position</li>
+                                <li><b>left :</b><i>([+|-]number)</i> set left position</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>animation :</span><i>(object)</i> animation start position effect
+                            <ul>
+                                <li><b>top :</b><i>([+|-]number)</i> set starting top position</li>
+                                <li><b>left :</b><i>([+|-]number)</i> set starting left position</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>speed :</span><i>(number)</i> animation speed in milliseconds
+                        </li>
+                        <li>
+                            <span>easing :</span><i>(string)</i> custom easing option if you're using an easing jQuery plugin
+                            <ul>
+                                <li>Default : linear</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>tooltip :</span><i>(string|jQuery Object)</i> tooltip text/html/jQuery element selector
+                        </li>
+                        <li>
+                            <span>on :</span><i>(string)</i> tooltip show event (default: mouseenter)
+                        </li>
+                        <li>
+                            <span>off :</span><i>(string)</i> tooltip hide event (default: mouseleave)
+                        </li>
+                        <li>
+                            <span>preventClose :</span><i>(boolean)</i> set true to avoid hiding tooltip when leave and hover on tooltip element (default: false)
+                        </li>
+                        <li>
+                            <span>onLoad :</span><i>(function)</i> callback function to be fired when tooltip loaded completely
+                            <ul>
+                                <li>function will pass tooltip element jQuery object</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>addClass :</span><i>(string)</i> add custom class to this tooltip
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+                <div style="height:100px;"></div>
+                <h1 style="text-align:center;">Examples</h1>
+                <div style="height:100px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="topBox" style="width:300px;">Hi There</div>
+    <div class="section">
+        <div class="row examples">
+            <div class="column grid-12">
+                <div class="" style="margin-top:0px;">
+                    <div class="row">
+                        <div class="column grid-4">
+                            <div class="block top-text">
+                                <h1 class="logo">Top Text</h1>
+                                <p>on hover</p>
+                            </div>
+                        </div>
+                        <div class="column grid-4">
+                            <div class="block top-box">
+                                <h1 class="logo">Top Box</h1>
+                                <p>on click</p>
+                            </div>
+                        </div>
+                        <div class="column grid-4">
+                            <div class="block fixPosition">
+                                <h1 class="logo">Fix Position</h1>
+                                <p>on click</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <div class="row">
+            <div class="column grid-6">
+                <div class="hello" style="">Contact us</div>
+                <div class="hello email"><a href="mailto:hello@sweefty.com">hello@sweefty.com</a> &nbsp;&laquo;&nbsp;&raquo;&nbsp; <a href="http://twitter.com/sweeftylab">@sweeftylab</a></div>
+            </div>
+            <div class="column grid-6"><div class="flogo"><a href="http://sweefty.com">Sweefty &hearts; you</a></div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(){
+        $('.block.top-text').tinytip({
+            tooltip: "Hello There",
+            animation : {
+                top : -25
+            },
+            speed : 100,
+            preventClose : true
+        });
+
+        $('.block.top-box').tinytip({
+            position : 'bottom',
+            tooltip: $('.topBox'),
+            animation : {
+                left : -25
+            },
+            fix : {
+                top : 10
+            },
+            on : 'click',
+            addClass : 'red'
+        });
+
+        $('.block.fixPosition').tinytip({
+            position : 'right',
+            tooltip: 'Right Corner',
+            on : 'click',
+            off : 'click',
+            fix :{
+                // left: 0,
+                top: -39
+            },
+            addClass : 'green'
+        });
+    });
+</script>
+
+    <!-- Quantcast Tag -->
+    <script type="text/javascript">
+        var _qevents = _qevents || [];
+
+        (function() {
+        var elem = document.createElement('script');
+        elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+        elem.async = true;
+        elem.type = "text/javascript";
+        var scpt = document.getElementsByTagName('script')[0];
+        scpt.parentNode.insertBefore(elem, scpt);
+        })();
+
+        _qevents.push({
+        qacct:"p-_KGh1jnDGx1N4"
+        });
+    </script>
+
+    <noscript>
+    <div style="display:none;">
+    <img src="//pixel.quantserve.com/pixel/p-_KGh1jnDGx1N4.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+    </noscript>
+    <!-- End Quantcast tag -->
+
+    </body>
+</html>
