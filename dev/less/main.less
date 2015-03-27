@@ -39,6 +39,12 @@
 
     .flogo {
         text-align: right;
+        @media @small {
+            text-align: left;
+            padding-right: 0;
+            padding-left: 20px;
+        }
+
         font-size: 26px;
         font-family: Lobster;
         padding-top: 30px;
@@ -175,17 +181,54 @@ h1.logo {
                    0 3px 0 #bbb,
                    0 4px 0 #fff,
                    0 2px 0 #aaa;
+
+                @media @small {
+                    font-size: 32px;
+                    line-height: 30px;
+                }
+
+                @media @medium {
+                    font-size: 42px;        
+                }
             }
 
             h2 {
                 color: #bbb;
                 font-size: 18px;
                 font-weight: normal;
+                @media @small {
+                    font-size: 14px;        
+                }
             }
 
             .buttons {
                 margin-top: 50px;
             }
+        }
+    }
+}
+
+.main-intro {
+    width:100%;
+    text-align:center;
+    padding: 150px 0;
+
+    h1 {
+        line-height: 34px;
+        font-size:46px;
+        @media @small {
+            font-size: 26px;
+        }
+
+        @media @medium {
+            font-size: 32px;
+        }
+    }
+
+    p {
+        padding: 0 100px;
+        @media @small {
+            padding: 0;
         }
     }
 }
