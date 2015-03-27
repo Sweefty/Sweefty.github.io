@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://sweefty.com/</title>
+  <link>http://sweefty.com/</link>
+
+<item>
+     <link>http://sweefty.com/</link>
+     <title>sweefty.com</title>
+     <description>web solutions</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://sweefty.com/temply/index.html</link>
+     <title>Temply</title>
+     <description>The Static HTML Creator</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://sweefty.com/heat/index.html</link>
+     <title>Heatjs</title>
+     <description>heatmap javascript library</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://sweefty.com/scriptr/index.html</link>
+     <title>Scriptrjs</title>
+     <description>Tiny AMD script Loader</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://sweefty.com/tinytip/index.html</link>
+     <title>TinyTip</title>
+     <description>Tiny Tooltip jQuery plugin</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
