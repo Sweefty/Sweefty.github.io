@@ -1,0 +1,404 @@
+{{#config}}
+	
+	{
+		"title" : "Bare CSS",
+		"description" : "Responsive CSS Grid"
+	}
+
+{{/config}}
+
+{{> header}}
+<style>
+
+	.demo {
+		margin-top: 100px;
+	}
+	.demo .block {
+        width: 100%;
+        /*padding: 20px;*/
+        margin: 0 auto;
+        background: #fff;
+        text-align: center;
+    }
+    
+    .demo .block p, .demo .block .nested {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        background: #fff;
+    }
+
+    .demo .block p:hover {
+        background: #eee;
+    }
+
+    .demo .block .nested {
+        overflow: hidden;
+        background: #eee;
+    }
+    
+    .demo .title {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .demo .title .icon {
+    	margin-right: 10px;
+    	cursor: pointer;
+    	font-size: 26px;
+    	color : #0099FF;
+    }
+
+    #demoModal {
+    	font-size: 11px;
+    	width: 50%;
+    	/*min-height: 300px;*/
+    	display: none;
+    	background: #fff;
+    }
+</style>
+
+<div class="container">
+	
+	<div class="intro row">
+		<div class="column grid-12">
+			<div class="block">
+				<div class="top-sep"></div>
+
+				<div class="splash">
+					<h1>Bare</h1>
+					<h2>Bare Minimal Responsive CSS Grid</h2>
+					<div class="buttons">
+						<a href="https://github.com/Sweefty/bare" class="button large red">Fork Me</a>
+						<a href="https://github.com/Sweefty/bare/archive/master.zip" class="button large red">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="row">
+			<div class="column grid-12">
+				<div class="block code">
+					<pre><code class="sh">$ bower install bare</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+        <div class="row">
+            <div class="column grid-12">
+
+<div class="block">
+
+<pre><code class="language-markup">
+
+&lt;link rel="stylesheet" href="bare.css"&gt;
+
+&lt;!-- Responsive Grid --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="column grid-10"&gt;&lt;/div&gt;
+	&lt;div class="column grid-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- omit column class for non responsive grids --&gt;
+&lt;div class="row"&gt;
+	&lt;div class="grid-10"&gt;&lt;/div&gt;
+	&lt;div class="grid-2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+<!-- split on device -->
+
+</code></pre>
+</div>
+
+    	</div>
+    		</div>
+    		
+    </div>
+
+    <div class="demo">
+    	<div class="block">
+            <div class="row">
+                <div class="grid-12 column title">
+                	<h1>
+                		<span class="icon icon-code" data-demo='demo1'></span>
+                		Grid System
+                	</h1>
+                </div>
+            </div>
+            
+            <div class="demo1">
+            <div class="row">
+                <div class="grid-12 column"><p>grid-12</p></div>
+            </div>
+
+            <div class="row">
+                <div class="grid-11 column"><p>grid-11</p></div>
+                <div class="grid-1 column"><p>grid-1</p></div>    
+            </div>
+            
+            <div class="row">
+                <div class="grid-10 column"><p>grid-10</p></div>
+                <div class="grid-2 column"><p>grid-2</p></div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-9 column"><p>grid-9</p></div>
+                <div class="grid-3 column"><p>grid-3</p></div>
+            </div>
+
+            <div class="row">
+                <div class="grid-8 column"><p>grid-8</p></div>
+                <div class="grid-4 column"><p>grid-4</p></div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-7 column"><p>grid-7</p></div>
+                <div class="grid-5 column"><p>grid-5</p></div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-6 column"><p>grid-6</p></div>
+                <div class="grid-6 column"><p>grid-6</p></div>
+            </div>
+            </div>
+        </div>
+        
+        
+        <div class="block">
+            <div class="row">
+                <div class="grid-12 column title">
+                	<h1>
+                		<span class="icon icon-code" data-demo='demo2'></span>
+                		Split On Device
+                	</h1>
+                </div>
+            </div>
+            
+            <div class="demo2">
+            <div class="row">
+                <div class="grid-12 column medium-split-3"><p>grid-12</p></div>
+                <div class="grid-11 column medium-split-3"><p>grid-11</p></div>
+                <div class="grid-1 column medium-split-3"><p>grid-1</p></div>
+                
+                <div class="grid-10 column medium-split-3 small-split-2"><p>grid-10</p></div>
+                <div class="grid-2 column medium-split-3 small-split-2"><p>grid-2</p></div>
+                
+                <div class="grid-9 column medium-split-3 small-split-2"><p>grid-9</p></div>
+                <div class="grid-3 column medium-split-3 small-split-2"><p>grid-3</p></div>
+                
+                <div class="grid-8 column medium-split-3 small-split-2"><p>grid-8</p></div>
+                <div class="grid-4 column medium-split-3 small-split-2"><p>grid-4</p></div>
+                
+                <!-- TABLET/MEDIUM WILL SPLIT TO 50% BY DEFAULT -->
+                <div class="grid-7 column small-split-2"><p>grid-7</p></div>
+                <div class="grid-5 column small-split-2"><p>grid-5</p></div>
+                
+                <div class="grid-6 column split-2"><p>grid-6</p></div>
+                <div class="grid-6 column split-2"><p>grid-6</p></div>
+            </div>
+            </div>
+        </div>
+
+        <div class="block">
+            <div class="row">
+                <div class="grid-12 column title">
+                	
+                	<h1>
+                		<span class="icon icon-code" data-demo='demo3'></span>
+                		Split On Device
+                	</h1>
+                </div>
+            </div>
+            
+            <div class="demo3">
+            <div class="row">
+                <div class="grid-4 column medium-split-2"><p>grid-4</p></div>
+                <div class="grid-4 column medium-split-2"><p>grid-4</p></div>
+                <div class="grid-4 column medium-split-1 medium-center"><p>grid-4</p></div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="block row">
+            <div class="row">
+                <div class="grid-12 column title">
+                	<h1>
+                		<span class="icon icon-code" data-demo='demo4'></span>
+                		Centered Columns
+                	</h1>
+                </div>
+            </div>
+
+            <div class="demo4">
+            <div class="row">
+                <div class="grid-11 center column"><p>grid-11</p></div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-7 center column"><p>grid-7</p></div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-3 column center"><p>grid-3</p></div>
+            </div>
+            </div>
+        </div>
+        
+        
+        <div class="block row">
+            <div class="row">
+                <div class="grid-12 column title">
+                	<h1>
+                		<span class="icon icon-code" data-demo='demo5'></span>
+                		Nested
+                	</h1>
+                </div>
+            </div>
+            
+            <div class="demo5">
+            <div class="row">
+                <div class="grid-12 column">
+                    <div class="nested">
+                        <div class="grid-6 column">
+                            <p>grid-6</p>
+                        </div>
+                        <div class="grid-6 column">
+                            <div class="row">
+                                <div class="grid-6 column">
+                                    <p>grid-6</p>
+                                </div>
+                                <div class="grid-6 column">
+                                    <p>grid-6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-12 column">
+                    <div class="nested">
+                        <div class="grid-3 column">
+                            <p>grid-3</p>
+                        </div>
+                        <div class="grid-9 column">
+                            <div class="row">
+                                <div class="grid-6 column">
+                                    <p>grid-6</p>
+                                </div>
+                                <div class="grid-6 column">
+                                    <p>grid-6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        
+        <div class="block row">
+            <div class="row">
+                <div class="grid-12 column title">
+                	<h1>
+                		<span class="icon icon-code" data-demo='demo6'></span>
+                		No Columns
+                	</h1>
+                </div>
+            </div>
+            
+            <div class="demo6">
+            <div class="row">
+                <div class="grid-12 column">
+                    <div class="nested">
+                        <div class="grid-6">
+                            <p>grid-6</p>
+                        </div>
+                        <div class="grid-6">
+                            <div class="row">
+                                <div class="grid-6">
+                                    <p>grid-6</p>
+                                </div>
+                                <div class="grid-6">
+                                    <p>grid-6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="grid-12 column">
+                    <div class="nested">
+                        <div class="grid-3 column">
+                            <p>grid-3</p>
+                        </div>
+                        <div class="grid-9 column">
+                            <div class="row">
+                                <div class="grid-6">
+                                    <p>grid-6</p>
+                                </div>
+                                <div class="grid-6">
+                                    <p>grid-6</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+	{{> footer}}
+</div>
+
+<div id="demoModal">
+<pre><code id="demoSyntax" class="language-markup">
+
+</code></pre>
+</div>
+
+<script>
+	$(document).ready(function(){
+		$(document).modal({
+	        easing : 'linear',
+	        speed : 250,
+	        animation : 'none',
+	        position : 'center',
+	        overlayClose : true,
+	        overlayColor : '#888'
+	    });
+
+		$('.demo .icon').click(function(){
+
+			var demo = $(this).data('demo');
+			var demoHTML = $('.' + demo).html();
+			$('#demoModal code').text(demoHTML);
+
+			Prism.highlightElement($('#demoSyntax')[0], false, function(){
+				$('#demoModal').modal('view',{
+		            easing : 'linear',
+		            position : 'center',
+		            animation : 'none',
+		            speed : 250
+	        	});
+			});
+
+			
+		});
+
+		// $('.demo .icon').modal({
+		// 	target : '#modal1'
+		// });
+	});
+</script>
