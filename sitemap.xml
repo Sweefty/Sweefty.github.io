@@ -8,52 +8,98 @@
 
 <url>
   <loc>http://sweefty.com/</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://sweefty.com/temply/index.html</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <loc>http://sweefty.com/scripts/</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://sweefty.com/moaModal/index.html</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sweefty.com/heat/index.html</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sweefty.com/bare/index.html</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sweefty.com/tinytip/index.html</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://sweefty.com/moaModal/examples.html</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <loc>http://sweefty.com/inspiration/clean-design/</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://sweefty.com/templates/</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/scripts/tinytip.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/scripts/moaModal.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/scripts/heat.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/bare/index.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/bare/</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/inspiration/clean-design/index.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/inspiration/clean-design/ipage-2.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/inspiration/clean-design/ipage-3.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://sweefty.com/templates/breeze/</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://sweefty.com/templates/bread/</loc>
-  <lastmod>2015-06-03T03:15:11+00:00</lastmod>
-  <changefreq>monthly</changefreq>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/templates/framed/</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://sweefty.com/scripts/moaModal-example.html</loc>
+  <lastmod>2015-06-07T21:48:47+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 </urlset>
