@@ -1,0 +1,279 @@
+{{#config}}
+    
+    {
+        "title" : "Sweefty.com - Heatjs jQuery Plugin",
+        "description" : "heatmap javascript, small with lazy loading, built for large data set",
+        "keywords" : "heatmap, javascript, lazyloading, large data, html5"
+    }
+
+{{/config}}
+
+{{> header}}
+
+<div class="container">
+    
+    <div class="intro row">
+        <div class="column grid-12">
+            <div class="block">
+                <div class="top-sep"></div>
+
+                <div class="splash">
+                    <h1>Heatjs</h1>
+                    <h2>Small, Efficient Lazy Loading Heat Maps</h2>
+                    <div class="buttons">
+                        <a href="https://github.com/Sweefty/heat" title="fork heatjs on github" target="_blank" class="button large red">Fork Me</a>
+                        <a href="https://github.com/Sweefty/heat/archive/master.zip" title="download heatjs jQuery plugin" class="button large red">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+                <div class="block code">
+                    <pre><code class="language-bash">$ bower install heat</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <div class="column grid-6">
+                <div class="block code">
+<pre><code class="language-javascript">
+var h = new Heatmap({
+    "element" : 'heatmap1'
+});
+
+//add one point 
+h.add.Point(x, y, density);
+</code></pre>
+
+                </div>
+            </div>
+
+            <div class="column grid-6">
+                <div class="block outline" style="padding:0;">
+                    <div id="heatmap1" style="height:210px;" class="heatmap1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+                <div style="height:100px;">
+                    
+                </div>
+                <h1 style="text-align:center;">How To Use</h1>
+                <div style="height:100px;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+
+<div class="block">
+<pre><code class="language-javascript">
+var h = new Heatmap({
+    "element" : 'heatmap1',
+    size : 10,
+    opacity: 1,
+    gradient : 'classic',
+    shadow : 'small',
+    zIndex : 10,
+    queue : {
+        items : 1000,
+        delay : 100,
+        onComplete : function(i){
+            console.debug('queue complete ' + i);
+        }
+    }
+});
+
+//adding one point
+h.add.Point(10, 20, 5); //x, y, point value
+
+//set of data to add
+var data = [{ x: 10, y: 5, count: 90}, ....];
+h.add.Data(data, function(){
+    //callback function when heatmap finish drawing all points
+});
+
+//clear heatmap
+h.clear();
+
+</code></pre>
+</div>
+
+            </div>
+            <div class="column grid-12">
+                <div class="block outline-no-hover option">
+                    <div class="title">Options</div>
+                    <ul>
+                        <li>
+                            <span>element :</span> element id where to draw the map
+                        </li>
+                        <li>
+                            <span>size :</span> circle size of each point
+                        </li>
+                        <li>
+                            <span>opacity :</span> maximum opacity value of the max point
+                        </li>
+                        <li>
+                            <span>gradient :</span> type of heatmap gradiant
+                            <ul>
+                                <li><b>Default :</b> classic | fire | gold</li>
+                                <li><b>Custom :</b> use your own png gradiant image</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span>shadow :</span> size of the shadow (small | medium | large)
+                        </li>
+                        <li>
+                            <span>zIndex :</span> z-index value of the heatmap overlay
+                        </li>
+                        <li>
+                            <span>queue :</span> data point queue options
+                            <ul>
+                                <li><b>items :</b> number of items to draw at once</li>
+                                <li><b>delay :</b> time to delay between each queue set</li>
+                                <li><b>onComplete :</b> callback function on every queue set</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <div class="column grid-12">
+                <div style="height:100px;"></div>
+                <h1 style="text-align:center;">Examples</h1>
+                <div style="height:100px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="row">
+            <div class="column grid-6">
+                <div class="block outline" style="padding:0;">
+                    <div id="heatmap2" style="height:200px;">
+                        <button class="button blue load" style="position:absolute;bottom:0;right:0;z-index:100;">Load Data</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column grid-6">
+                <div class="block outline" style="padding:0;position:relative;">
+                <button class="button blue clear" style="position:absolute;bottom:0;right:0;z-index:100;">Clear Data</button>
+                    <div id="heatmap3" style="height:200px;" class="heatmap3">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    {{> footer}}
+</div>
+
+<script>
+    function getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    var data = function(maxX, maxY, maxCount, n){
+        var obj = [];
+        for (var i =0; i < n; i++){
+            obj.push({
+                x : getRandomNumber(0, maxX),
+                y : getRandomNumber(0, maxY),
+                count : getRandomNumber(0, maxCount)
+            });
+        }
+        return obj;
+    };
+
+    var h = new Heatmap({
+        "element" : 'heatmap1',
+        size : 50,
+        opacity: 1,
+        gradient : 'classic',
+        shadow : 'large'
+    });
+
+    h.add.Data(data(600, 300, 100, 1000), function(){
+        console.log('done first');
+    });
+
+    // h.add.Data(data(600, 300, 100, 5500), function(){
+    //     console.log('done second');
+    // });
+
+
+    //first example
+    var h2 = new Heatmap({
+        element : 'heatmap2',
+        size : 25,
+        opacity: 1,
+        gradient : 'classic',
+        shadow : 'large',
+        zIndex : 10,
+        queue : {
+            items : 100,
+            delay : 250,
+            onComplete : function(i){
+                console.debug('queue complete ' + i);
+            }
+        }
+    });
+
+    $('.load').click(function(){
+        //h2.add.Point(10 , 10, 1000);
+        var $this = $(this);
+        $this.prop("disabled", "disabled");
+        $this.text("Loading..");
+        h2.add.Data(data(600, 300, 10, 500), function(){
+            $this.text("Load More");
+            $this.prop("disabled", "");
+        });
+    });
+
+
+    //second example
+    var h3 = new Heatmap({
+        element : 'heatmap3',
+        size : 75,
+        opacity: 1,
+        gradient : 'classic',
+        shadow : 'medium',
+        zIndex : 10,
+        queue : {
+            items : 100,
+            delay : 250,
+            onComplete : function(i){
+                console.debug('queue complete ' + i);
+            }
+        }
+    });
+
+    document.querySelector('.heatmap3').onclick = function(ev) {
+        h3.add.Point(ev.layerX , ev.layerY, 1);
+    };
+
+    $('.clear').click(function(){
+        h3.clear();
+    });
+
+</script>

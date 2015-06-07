@@ -1,0 +1,51 @@
+{
+	"IMGbase" : "../../assets/images/lists/css/framework",
+	"items" : [
+		{
+			"name" : "bootstrap",
+			"description" : "bootstrap css framework",
+			"long" : "Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.",
+			"github" : "https://github.com/twbs/bootstrap/",
+			"webpage" : "http://getbootstrap.com/"
+		},
+
+		{
+			"name" : "foundation",
+			"description" : "foundation css framework",
+			"long" : "ZURB foundation, the most advanced responsive front-end framework in the world.",
+			"github" : "https://github.com/zurb/foundation",
+			"webpage" : "http://foundation.zurb.com/"
+		},
+
+		{
+			"name" : "kickstart",
+			"description" : "kickstart css framework",
+			"long" : "Kickstart, Ultra–Lean HTML5, CSS, & JS Building Blocks for Rapid Website Production",
+			"webpage" : "http://www.99lime.com/elements/"
+		},
+
+		{
+			"name" : "bourbon",
+			"description" : "Bourbon css framework",
+			"long" : "Bourbon Neat, a lightweight semantic grid framework for Sass and Bourbon.",
+			"github" : "https://github.com/thoughtbot/neat",
+			"webpage" : "http://neat.bourbon.io/"
+		},
+
+		{
+			"name" : "pure",
+			"description" : "pure css framework",
+			"long" : "A set of small, responsive CSS modules that you can use in every web project.",
+			"github" : "https://github.com/yahoo/pure/",
+			"webpage" : "http://purecss.io/"
+		},
+
+		{
+			"name" : "centurion",
+			"description" : "centurion css framework",
+			"long" : "Centurion is a web-based framework for rapid prototyping and building larger web projects.",
+			"github" : "https://github.com/justinhough/Centurion",
+			"webpage" : "http://www.centurionframework.com/"
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"IMGbase" : "../../assets/images/inspiration/clean-design",
+	"items" : [
+		{
+			"name" : "olafurarnalds",
+			"desc" : "Ólafur Arnalds",
+			"url" : "http://olafurarnalds.com/"
+		},
+
+		{
+			"name" : "Vibrant",
+			"url" : "http://www.vibrantcomposites.com/"
+		},
+
+		{
+			"name" : "framerjs",
+			"url" : "http://framerjs.com/"
+		},
+
+		{
+			"name" : "pagekit",
+			"url" : "http://pagekit.com/"
+		},
+
+		{
+			"name" : "squareup",
+			"url" : "https://squareup.com"
+		},
+
+		{
+			"name" : "instapaper",
+			"url" : "https://www.instapaper.com/"
+		},
+
+		{
+			"name" : "mixpanel",
+			"url" : "https://mixpanel.com/"
+		},
+
+		{
+			"name" : "minimals",
+			"url" : "http://www.minimalsworld.com/"
+		},
+
+		{
+			"name" : "derekboateng",
+			"desc" : "Derek Boateng",
+			"url" : "http://derekboateng.com/"
+		},
+		{
+			"name" : "qrafti",
+			"url" : "http://www.qrafti.com/"
+		}
+		
+	]
+}

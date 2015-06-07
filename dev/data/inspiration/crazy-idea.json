@@ -1,0 +1,10 @@
+{
+	"IMGbase" : "../assets/images/inspiration/crazy-idea",
+	"items" : [
+		{
+			"name" : "presentplus",
+			"desc" : "Present Plus",
+			"url" : "http://www.presentplus.com/"
+		}
+	]
+}

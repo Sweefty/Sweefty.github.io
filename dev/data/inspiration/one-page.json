@@ -1,0 +1,14 @@
+{
+	"IMGbase" : "../assets/images/inspiration/one-page",
+	"items" : [
+		{
+			"name" : "simplesimple",
+			"url" : "http://simplesimple.co/"
+		},
+
+		{
+			"name" : "daysapp",
+			"url" : "http://daysapp.co/"
+		}
+	]
+}
