@@ -50,7 +50,15 @@
 		{
 			"name" : "qrafti",
 			"url" : "http://www.qrafti.com/"
+		},
+		{
+			"name" : "swifty-app",
+			"desc" : "Swifty App",
+			"url" : "http://swifty-app.com/"
+		},
+		{
+			"name" : "Lookout",
+			"url" : "https://www.lookout.com/"
 		}
-		
 	]
 }
